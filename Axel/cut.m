@@ -1,4 +1,4 @@
-function [I_cut1] = cut(I_rot)
+function [I_cut1,BW] = cut(I_rot)
 %Authors : Axel BRUYERE/Hippolyte CADORET/Dorian FABREGUE
 
 %Input : 
@@ -31,6 +31,14 @@ while true
         b = 1;
     end
     if a == 1 & b == 1
+        o = 'stoooooop'
+        break
+    end
+    'length(I_cut(:,1,1))'
+    length(I_cut(:,1,1))
+    if length(I_cut(:,1,1)) < 35
+        w = 'Iciiiiiiii'
+        
         break
     end
 end
@@ -65,9 +73,9 @@ for k = 1:p
 end
 
 %Finitions du rognage
-c = 10;
+c = 8; %c doit être pair 
 u = length(I_ero)-1.5*c;
 v = length(I_ero(:,1))-1.5*c;
 I_cut1 = imcrop(I_cut,[c c length(I_ero)-1.5*c length(I_ero(:,1))-2.1*c]);
 
-
+% I_cut1 = I_cut;
