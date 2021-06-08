@@ -52,9 +52,11 @@ if s<0.18 || v<0.37
      elseif 0.26<h && h<0.5
        color='green';
        value=0;
+       factor=100e3;
      elseif 0.5<h && h<0.62
        color='blue'
        value=6;
+       factor=1e6;
        
      elseif 0.62<h || h<0.04
        
@@ -62,19 +64,22 @@ if s<0.18 || v<0.37
             if 0.5<s;
               color='red';
               value=2;
+              factor=100;
             else 
               color='purple';
               value=7;
+              factor=10e6;
             end 
             
          else 
          color='brown';
          value=1;
+         factor=10;
          end
      end
      
-end
-factor = 10^value;  
+    end
+ 
 end
  
 

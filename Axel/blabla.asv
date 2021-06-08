@@ -1,0 +1,16 @@
+clc;close all;clear variables;
+
+I = imread('images/resistance_oblique_1.jpg');
+value = 10;
+
+if value > 1000 && value < 1000000
+    value = value/1000;
+    title = 'R = %d k\\Omega';
+elseif value > 1000000 && value < 1000000000
+    v
+end
+title = 'R = %d \\Omega';
+
+figure(1000)
+imshow(I)
+sgtitle(sprintf('R = %d \\Omega',value))
