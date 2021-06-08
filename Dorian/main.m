@@ -67,9 +67,9 @@ for i = 1:N
 end
 
 [c,tolerance] = detection_metallic(Ic{1});
-if ne(c,'false')
-    Ic = fliplr(Ic);
-end
+% if ne(c,'false')
+%     Ic = fliplr(Ic);
+% end
 color = {};
 value = {};
 factor = {};
