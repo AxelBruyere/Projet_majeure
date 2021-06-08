@@ -66,21 +66,12 @@ for i = 1:N
     close 101
 end
 
-[c,tolerance] = detection_metallic(Ic{1});
-if ne(c,'false')
-    Ic = fliplr(Ic);
-end
-color = {};
-value = {};
-factor = {};
 for i = 1:length(Ic)
-    [c,v,f] = detection_color(Ic{i});
-    color{i} = c;
-    value{i} = v;
-    factor{i} = f;
+    [color{i},value{i},factor{i}] = detection_color(Ic{i});
 end
 
-[u,v] = detection_metallic(Ic{4});
+
+
 
 figure(8)
 for i = 1:4
