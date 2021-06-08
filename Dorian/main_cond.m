@@ -1,9 +1,9 @@
 clc;close all;clear variables;
 
-image = 'images/resistance_oblique_1.jpg';
-% image = 'images/resistance_bleue_1.jpg';
-% image = 'images/resistance_1.png';
-% image = 'images/resistance_marron_1.png'
+% image = 'images/resistance_oblique_1.jpg';
+image = 'images/resistance_bleue_1.jpg';
+% image = 'images/resistance_5.png';
+% image = 'images/resistance_marron_2.png'
 % image = 'images/resistance_multi.jpg';
 
 I = imread(image);
@@ -59,22 +59,15 @@ for i = 1:N
     figure(i)
     imshow(L_cond{i})
 end
+
+
+
 rmdir tempo s
 
-for i = 1:N
-    Ic = detection_barres(L_cond{i});
-    close 101
-end
-
-for i = 1:length(Ic)
-    [color{i},value{i},factor{i}] = detection_color(Ic{i});
-end
 
 
 
 
-figure(8)
-for i = 1:4
-subplot (2,2,i)
-imshow(Ic{i})
-end
+
+
+
