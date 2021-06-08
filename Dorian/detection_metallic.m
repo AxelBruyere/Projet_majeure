@@ -29,6 +29,6 @@ if v<0.4   % cas ou la couleur est trop sombre
  elseif h<0.15 && 0.15< s && 0.4<s && v<0.6 %doré proche du marron 
       c='gold';
      tolerance=5;
- e
+end
   
   end 

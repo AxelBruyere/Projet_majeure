@@ -89,5 +89,3 @@ for i = 1:4
 subplot (2,2,i)
 imshow(Ic{i})
 end
-
-disp(I,333000)
